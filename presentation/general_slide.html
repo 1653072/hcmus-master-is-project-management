@@ -333,11 +333,11 @@
               <tbody>
                 <tr>
                   <td>TAW</td>
-                  <td>Giá trị điểm các tác nhân (Total Actor Weight): 13 tác nhân × 4 điểm = 52</td>
+                  <td>Giá trị điểm các tác nhân (Total Actor Weight): <br><b>13 tác nhân × 4 điểm = 52 điểm</b></td>
                 </tr>
                 <tr>
                   <td>TBF</td>
-                  <td>Giá trị điểm các trường hợp sử dụng (Transaction Bundle Factor): tổng 21 UC = 255</td>
+                  <td>Giá trị điểm các trường hợp sử dụng (Transaction Bundle Factor): <br><b>Tổng 21 UC = 255</b></td>
                 </tr>
                 <tr>
                   <td>UUCP</td>
@@ -464,45 +464,42 @@
               <div class="slide-body cost-conclusion-body">
                 <section class="cost-block">
                   <h3 class="cost-block-title">Nguyên nhân chênh lệch</h3>
-                  <div class="cost-gap-cards">
-                    <article class="cost-gap-card cost-gap-card--ucp">
-                      <span class="cost-gap-badge">UCP</span>
-                      <p>Đo theo <strong>kịch bản nghiệp vụ</strong> → dễ đánh giá thấp complexity ngầm (payroll ACID, concurrency)</p>
+                  <div class="cost-panel-grid">
+                    <article class="cost-panel-card cost-panel-card--ucp">
+                      <span class="cost-panel-badge">UCP</span>
+                      <h4 class="cost-panel-title">Đo theo kịch bản nghiệp vụ</h4>
+                      <p class="cost-panel-text">Dễ đánh giá thấp complexity ngầm (payroll ACID, concurrency)</p>
                     </article>
-                    <article class="cost-gap-card cost-gap-card--fpa">
-                      <span class="cost-gap-badge">FPA</span>
-                      <p>Bóc <strong>cấu trúc dữ liệu</strong> (8 ILF, 3 EIF) → quy mô FP cao hơn <strong>2,46×</strong></p>
+                    <article class="cost-panel-card cost-panel-card--fpa">
+                      <span class="cost-panel-badge">FPA</span>
+                      <h4 class="cost-panel-title">Bóc cấu trúc dữ liệu</h4>
+                      <p class="cost-panel-text">8 ILF, 3 EIF → quy mô FP cao hơn <strong>2,46×</strong></p>
                     </article>
-                    <article class="cost-gap-card cost-gap-card--fpa">
-                      <span class="cost-gap-badge">FPA</span>
-                      <p>Đơn giá <strong>fully-loaded</strong> ($6.000/PM): overhead + QA + risk + lợi nhuận nhà thầu</p>
+                    <article class="cost-panel-card cost-panel-card--fpa">
+                      <span class="cost-panel-badge">FPA</span>
+                      <h4 class="cost-panel-title">Đơn giá fully-loaded</h4>
+                      <p class="cost-panel-text">$6.000/PM gồm overhead + QA + risk + lợi nhuận nhà thầu</p>
                     </article>
                   </div>
                 </section>
     
                 <section class="cost-block cost-block--proposal">
                   <h3 class="cost-block-title">Đề xuất của nhóm</h3>
-                  <div class="cost-proposal-cards">
-                    <article class="cost-proposal-card cost-proposal-card--hero">
-                      <span class="cost-proposal-icon" aria-hidden="true">✓</span>
-                      <div>
-                        <h4>Triển khai UCP In-house</h4>
-                        <p class="cost-proposal-metric">1,29 tỷ VNĐ · 5 kỹ sư · 6 tháng · 100% mã nguồn</p>
-                      </div>
+                  <div class="cost-panel-grid">
+                    <article class="cost-panel-card cost-panel-card--ucp cost-panel-card--emphasis">
+                      <span class="cost-panel-badge">Đề xuất 1</span>
+                      <h4 class="cost-panel-title">Triển khai UCP In-house</h4>
+                      <p class="cost-panel-text">1,29 tỷ VNĐ · 5 kỹ sư · 6 tháng · 100% mã nguồn</p>
                     </article>
-                    <article class="cost-proposal-card">
-                      <span class="cost-proposal-icon cost-proposal-icon--ref" aria-hidden="true">◎</span>
-                      <div>
-                        <h4>FPA làm thước đo tham chiếu</h4>
-                        <p class="cost-proposal-metric">552,45 FP — kiểm soát chất lượng, không bỏ sót rủi ro kỹ thuật</p>
-                      </div>
+                    <article class="cost-panel-card cost-panel-card--fpa">
+                      <span class="cost-panel-badge">Đề xuất 2</span>
+                      <h4 class="cost-panel-title">FPA làm thước đo tham chiếu</h4>
+                      <p class="cost-panel-text">552,45 FP — kiểm soát chất lượng, không bỏ sót rủi ro kỹ thuật</p>
                     </article>
-                    <article class="cost-proposal-card cost-proposal-card--save">
-                      <span class="cost-proposal-icon cost-proposal-icon--save" aria-hidden="true">↓</span>
-                      <div>
-                        <h4>Tiết kiệm so với dự toán 671 đầy đủ</h4>
-                        <p class="cost-proposal-metric"><strong>~600 triệu</strong> (1,95 tỷ → 1,29 tỷ) nhờ tự xây dựng in-house</p>
-                      </div>
+                    <article class="cost-panel-card cost-panel-card--orange">
+                      <span class="cost-panel-badge">Đề xuất 3</span>
+                      <h4 class="cost-panel-title">Tiết kiệm so với dự toán 671 đầy đủ</h4>
+                      <p class="cost-panel-text"><strong>~600 triệu</strong> (1,95 tỷ → 1,29 tỷ) nhờ tự xây dựng in-house</p>
                     </article>
                   </div>
                 </section>
@@ -571,91 +568,240 @@
 
     <!-- SLIDE 13 -->
     <section class="slide" data-slide="13">
-              <div class="slide-header">ĐỘ NHẠY: TĂNG 20% NHÂN SỰ</div>
-              <div class="slide-body">
-                <table>
-                  <tr><th>Chỉ số</th><th>UCP (5→6)</th><th>FPA (25→30)</th></tr>
-                  <tr><td>Thời gian</td><td>6 → <strong>4,5–5 tháng</strong></td><td>10 → <strong>8,5 tháng</strong></td></tr>
-                  <tr><td>PM</td><td>29 (không đổi)</td><td>251,11 (không đổi)</td></tr>
-                  <tr><td>Lương</td><td>1,015 tỷ</td><td>39,17 tỷ</td></tr>
-                  <tr><td>Hạ tầng+AI</td><td>78 → <strong>65 triệu</strong></td><td>Đã bao gồm</td></tr>
-                  <tr><td><strong>Tổng</strong></td><td><strong>1,277 tỷ (−13 triệu)</strong></td><td>39,17 tỷ</td></tr>
-                </table>
-                <div id="chart-sens-up"></div>
-                <p class="note">FPA: Brooks' Law — nhồi người không tăng hiệu quả tuyến tính</p>
-              </div>
-              <div class="slide-footer">13 / 29</div>
-            </section>
+      <div class="slide-header">ĐỘ NHẠY: TĂNG 20% NHÂN SỰ</div>
+      <div class="slide-body sens-slide sens-slide--up">
+        <p class="sens-kicker">
+          <span class="sens-kicker-label">Kịch bản</span>
+          Tăng đội ngũ <strong>5 → 6</strong> người · Tiến độ UCP rút ngắn <strong>~1 tháng</strong> · FPA gần như không đổi
+        </p>
+        <div class="sens-layout">
+          <div class="sens-panel">
+            <table class="sens-table">
+              <thead>
+                <tr>
+                  <th>Chỉ số</th>
+                  <th>UCP (5→6)</th>
+                  <th>FPA (25→30)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thời gian</td>
+                  <td>6 → <strong>4,5–5 tháng</strong></td>
+                  <td>10 → <strong>8,5 tháng</strong></td>
+                </tr>
+                <tr>
+                  <td>PM</td>
+                  <td>29 (không đổi)</td>
+                  <td>251,11 (không đổi)</td>
+                </tr>
+                <tr>
+                  <td>Lương</td>
+                  <td>1,015 tỷ</td>
+                  <td>39,17 tỷ</td>
+                </tr>
+                <tr>
+                  <td>Hạ tầng+AI</td>
+                  <td>78 → <strong>65 triệu</strong></td>
+                  <td>Đã bao gồm</td>
+                </tr>
+                <tr class="sens-table-total">
+                  <td>Tổng</td>
+                  <td><strong>1,277 tỷ (−13 triệu)</strong></td>
+                  <td>39,17 tỷ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="sens-panel sens-panel--chart">
+            <p class="sens-chart-title">Tác động ngân sách UCP</p>
+            <div id="chart-sens-up"></div>
+            <p class="sens-insight sens-insight--good">
+              <strong>Kết luận:</strong> Tăng nhẹ nhân sự rút ngắn dự án → giảm chi phí duy trì hạ tầng &amp; vận hành <strong>−13 triệu</strong>.
+            </p>
+            <p class="sens-footnote">FPA: Brooks' Law — nhồi người không tăng hiệu quả tuyến tính</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">13 / 29</div>
+    </section>
 
     <!-- SLIDE 14 -->
-    <section class="slide" data-slide="14">
-              <div class="slide-header">BẢNG ĐỐI CHIẾU ĐỘ NHẠY NHÂN SỰ & KẾT LUẬN</div>
-              <div class="slide-body">
-                <table>
-                  <tr><th>Tiêu chí</th><th>Giảm 20%</th><th>Tăng 20%</th></tr>
-                  <tr><td>UCP — Chi phí</td><td>↑ 1,303 tỷ</td><td>↓ 1,277 tỷ</td></tr>
-                  <tr><td>UCP — Tiến độ</td><td>+1 tháng</td><td>−1 tháng</td></tr>
-                  <tr><td>FPA — Chi phí</td><td>Không đổi</td><td>Không đổi</td></tr>
-                  <tr><td>FPA — Chất lượng</td><td>Rủi ro UAT</td><td>Brooks' Law</td></tr>
-                </table>
-                <div class="two-col" style="margin-top:10px;">
-                  <div class="card"><strong>UCP:</strong> Duy trì hoặc tăng nhẹ NS (+20%) để tối ưu chi phí & tiến độ</div>
-                  <div class="card"><strong>FPA:</strong> Cần SLA chặt; giám sát nhà thầu không tăng/giảm NS tùy tiện</div>
-                </div>
-              </div>
-              <div class="slide-footer">14 / 29</div>
-            </section>
+    <section class="slide" id="slide-sens-compare" data-slide="14">
+      <div class="slide-header">BẢNG ĐỐI CHIẾU ĐỘ NHẠY NHÂN SỰ &amp; KẾT LUẬN</div>
+      <div class="slide-body sens-compare-slide">
+        <div class="sens-panel sens-compare-panel">
+          <table class="sens-table sens-compare-table">
+            <thead>
+              <tr>
+                <th>Tiêu chí</th>
+                <th class="sens-col-down">Giảm 20%</th>
+                <th class="sens-col-up">Tăng 20%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>UCP — Tổng chi phí</td>
+                <td><span class="sens-trend sens-trend--up">↑ 1,303 tỷ</span></td>
+                <td><span class="sens-trend sens-trend--down">↓ 1,277 tỷ</span></td>
+              </tr>
+              <tr>
+                <td>UCP — Rủi ro tiến độ</td>
+                <td><span class="sens-trend sens-trend--warn">+1 tháng</span></td>
+                <td><span class="sens-trend sens-trend--good">−1 tháng</span></td>
+              </tr>
+              <tr>
+                <td>FPA — Tổng chi phí</td>
+                <td colspan="2" class="sens-cell-neutral">Không đổi · 39,17 tỷ</td>
+              </tr>
+              <tr>
+                <td>FPA — Rủi ro chất lượng</td>
+                <td><span class="sens-trend sens-trend--warn">Rủi ro UAT</span></td>
+                <td><span class="sens-trend sens-trend--warn">Brooks' Law</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+        <section class="cost-block cost-block--proposal">
+          <h3 class="cost-block-title">Kết luận</h3>
+          <div class="cost-panel-grid cost-panel-grid--2">
+            <article class="cost-panel-card cost-panel-card--ucp">
+              <span class="cost-panel-badge">UCP In-house</span>
+              <h4 class="cost-panel-title">Duy trì hoặc tăng nhẹ NS (+20%)</h4>
+              <p class="cost-panel-text">Tối ưu cả <strong>tiến độ</strong> lẫn <strong>chi phí vận hành</strong> — PM không đổi nhưng rút ngắn ~1 tháng</p>
+            </article>
+            <article class="cost-panel-card cost-panel-card--fpa">
+              <span class="cost-panel-badge">FPA Thuê ngoài</span>
+              <h4 class="cost-panel-title">Ngân sách an toàn, cần SLA chặt</h4>
+              <p class="cost-panel-text">Giám sát nhà thầu — <strong>không tăng/giảm NS tùy tiện</strong>; chất lượng phụ thuộc cam kết hợp đồng</p>
+            </article>
+          </div>
+        </section>
+      </div>
+      <div class="slide-footer">14 / 29</div>
+    </section>
 
     <!-- SLIDE 15 -->
     <section class="slide" data-slide="15">
-              <div class="slide-header">ĐỘ NHẠY: GENAI 50%</div>
-              <div class="slide-body two-col">
-                <div>
-                  <table>
-                    <tr><th>Chỉ số</th><th>UCP</th><th>FPA</th></tr>
-                    <tr><td>Giảm nỗ lực</td><td>−31,5% (19,9 PM)</td><td>~172 PM (NB)</td></tr>
-                    <tr><td>Lương</td><td>695,3 triệu</td><td>39,17 tỷ</td></tr>
-                    <tr><td>AI tools</td><td>60 triệu</td><td>NB tự chi</td></tr>
-                    <tr><td><strong>Tổng</strong></td><td><strong>1,000,6 tỷ</strong></td><td>39,17 tỷ</td></tr>
-                  </table>
-                </div>
-                <div>
-                  <p><strong>Tiết kiệm UCP: ~289,7 triệu</strong></p>
-                  <div id="chart-genai50"></div>
-                  <p class="note">FPA: bàn giao sớm 10 → ~7 tháng</p>
-                </div>
-              </div>
-              <div class="slide-footer">15 / 29</div>
-            </section>
+      <div class="slide-header">ĐỘ NHẠY: GENAI 50%</div>
+      <div class="slide-body sens-slide sens-slide--genai sens-slide--genai50">
+        <p class="sens-kicker">
+          <span class="sens-kicker-label">GenAI 50%</span>
+          Giảm nỗ lực UCP <strong>−31,5%</strong> (29 → 19,9 PM) · Lợi ích tài chính thuộc về doanh nghiệp in-house
+        </p>
+        <div class="sens-layout">
+          <div class="sens-panel">
+            <table class="sens-table">
+              <thead>
+                <tr>
+                  <th>Chỉ số</th>
+                  <th>UCP</th>
+                  <th>FPA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Giảm nỗ lực</td>
+                  <td><strong>−31,5%</strong> (19,9 PM)</td>
+                  <td>~172 PM (NB)</td>
+                </tr>
+                <tr>
+                  <td>Lương</td>
+                  <td>1,015 tỷ → <strong>695,3 triệu</strong></td>
+                  <td>39,17 tỷ</td>
+                </tr>
+                <tr>
+                  <td>AI tools</td>
+                  <td>30 tr → <strong>60 triệu</strong></td>
+                  <td>NB tự chi</td>
+                </tr>
+                <tr class="sens-table-total">
+                  <td>Tổng</td>
+                  <td><strong>1,000,6 tỷ</strong></td>
+                  <td>39,17 tỷ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="sens-panel sens-panel--chart">
+            <p class="sens-chart-title">Tiết kiệm UCP: ~289,7 triệu</p>
+            <div id="chart-genai50"></div>
+            <p class="sens-insight sens-insight--good">
+              <strong>Lợi ích UCP:</strong> Ngân sách giảm <strong>22%</strong> so với baseline 1,29 tỷ — doanh nghiệp giữ toàn bộ lợi ích tài chính.
+            </p>
+            <p class="sens-footnote">FPA: bàn giao sớm 10 → ~7 tháng (lợi ích thuộc nhà thầu)</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">15 / 29</div>
+    </section>
 
     <!-- SLIDE 16 -->
     <section class="slide" data-slide="16">
-              <div class="slide-header">ĐỘ NHẠY: GENAI 80%</div>
-              <div class="slide-body two-col">
-                <div>
-                  <table>
-                    <tr><th>Chỉ số</th><th>UCP</th><th>FPA</th></tr>
-                    <tr><td>Giảm nỗ lực</td><td>−60,5% (11,5 PM)</td><td>~99 PM (NB)</td></tr>
-                    <tr><td>Lương</td><td>400,9 triệu</td><td>39,17 tỷ</td></tr>
-                    <tr><td>AI tools</td><td>105 triệu</td><td>NB tự chi</td></tr>
-                    <tr><td><strong>Tổng</strong></td><td><strong>751,2 triệu</strong></td><td>39,17 tỷ</td></tr>
-                  </table>
-                </div>
-                <div>
-                  <p><strong>Tiết kiệm UCP: ~539 triệu</strong></p>
-                  <div id="chart-genai80"></div>
-                  <p>Frontend −80% · Testing −70% · Backend −60%</p>
-                  <p class="note">FPA: bàn giao sớm 10 → ~5 tháng</p>
-                </div>
-              </div>
-              <div class="slide-footer">16 / 29</div>
-            </section>
+      <div class="slide-header">ĐỘ NHẠY: GENAI 80%</div>
+      <div class="slide-body sens-slide sens-slide--genai sens-slide--genai80">
+        <p class="sens-kicker">
+          <span class="sens-kicker-label">GenAI 80%</span>
+          Giảm nỗ lực UCP <strong>−60,5%</strong> (29 → 11,5 PM) · Ngân sách xuống dưới <strong>1 tỷ VNĐ</strong>
+        </p>
+        <div class="sens-layout">
+          <div class="sens-panel">
+            <table class="sens-table">
+              <thead>
+                <tr>
+                  <th>Chỉ số</th>
+                  <th>UCP</th>
+                  <th>FPA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Giảm nỗ lực</td>
+                  <td><strong>−60,5%</strong> (11,5 PM)</td>
+                  <td>~99 PM (NB)</td>
+                </tr>
+                <tr>
+                  <td>Lương</td>
+                  <td>1,015 tỷ → <strong>400,9 triệu</strong></td>
+                  <td>39,17 tỷ</td>
+                </tr>
+                <tr>
+                  <td>AI tools</td>
+                  <td>30 tr → <strong>105 triệu</strong></td>
+                  <td>NB tự chi</td>
+                </tr>
+                <tr class="sens-table-total">
+                  <td>Tổng</td>
+                  <td><strong>751,2 triệu</strong></td>
+                  <td>39,17 tỷ</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="genai-tags">
+              <span class="genai-tag">Frontend −80%</span>
+              <span class="genai-tag">Testing −70%</span>
+              <span class="genai-tag">Backend −60%</span>
+            </div>
+          </div>
+          <div class="sens-panel sens-panel--chart">
+            <p class="sens-chart-title">Tiết kiệm UCP: ~539 triệu</p>
+            <div id="chart-genai80"></div>
+            <p class="sens-insight sens-insight--good">
+              <strong>Phương án tối ưu:</strong> UCP + GenAI 80% — sở hữu mã nguồn, ngân sách <strong>&lt; 1 tỷ</strong>, tiết kiệm <strong>42%</strong>.
+            </p>
+            <p class="sens-footnote">FPA: bàn giao sớm 10 → ~5 tháng (lợi ích thuộc nhà thầu)</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">16 / 29</div>
+    </section>
 
     <!-- SLIDE 17 -->
     <section class="slide" data-slide="17">
               <div class="slide-header">BẢNG ĐỐI CHIẾU GENAI & KẾT LUẬN</div>
               <div class="slide-body">
-                <table>
+                <table class="compare-table">
                   <tr><th>Tiêu chí</th><th>UCP In-house</th><th>FPA Thuê ngoài</th></tr>
                   <tr><td>Ngân sách</td><td>Giảm mạnh (1,29→751 triệu)</td><td>Không đổi</td></tr>
                   <tr><td>Ai hưởng lợi?</td><td>Doanh nghiệp</td><td>Nhà thầu</td></tr>

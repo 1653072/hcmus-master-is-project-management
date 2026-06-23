@@ -1,0 +1,245 @@
+/**
+ * THEME: Digital Blueprint
+ * Nguồn tham chiếu: style_references/
+ *   - V2_HRIS_Digital_Blueprint + ImageTemplate (glass, circuit HUD)
+ *   - V1_Strategic (lưới kỹ thuật, isometric wireframe)
+ *   - V3_Strategic (CAD corners, blueprint lines)
+ *
+ * Chỉnh theme: sửa --theme-* trong :root (slide.css hoặc file này).
+ */
+
+:root {
+  --theme-name: "digital-blueprint";
+  --theme-bg: #eef4fa;
+  --theme-bg-end: #e2edf6;
+  --theme-grid: rgba(59, 130, 196, 0.085);
+  --theme-deco-opacity: 0.55;
+  --theme-orb-opacity: 0.22;
+  --theme-brand-size: 13px;
+}
+
+/* ─── Slide decoration layer (inject bởi slide-deco.js) ─────── */
+.slide-deco {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.slide-deco__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: var(--theme-orb-opacity);
+}
+
+.slide-deco--accent-blue .slide-deco__orb {
+  width: 42vmin;
+  height: 42vmin;
+  background: var(--accent-blue);
+  top: -8%;
+  right: -6%;
+}
+
+.slide-deco--accent-purple .slide-deco__orb {
+  width: 38vmin;
+  height: 38vmin;
+  background: var(--accent-purple);
+  bottom: -6%;
+  left: -4%;
+}
+
+.slide-deco--accent-orange .slide-deco__orb {
+  width: 36vmin;
+  height: 36vmin;
+  background: var(--accent-orange);
+  top: 10%;
+  left: -5%;
+}
+
+.slide-deco__pattern {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  opacity: var(--theme-deco-opacity);
+}
+
+.slide-deco--cover .slide-deco__pattern--circuit {
+  background-image: url("assets/deco-circuit.svg");
+  background-size: min(90%, 1100px);
+  background-position: center center;
+}
+
+.slide-deco--cover .slide-deco__pattern--iso {
+  background-image: url("assets/deco-isometric.svg");
+  background-size: min(38%, 320px);
+  background-position: 4% 58%;
+  opacity: 0.45;
+}
+
+.slide-deco--content .slide-deco__pattern--circuit {
+  background-image: url("assets/deco-circuit.svg");
+  background-size: min(48%, 520px);
+  background-position: 98% 50%;
+  opacity: 0.38;
+}
+
+.slide-deco--section .slide-deco__pattern--circuit {
+  background-image: url("assets/deco-circuit.svg");
+  background-size: min(70%, 800px);
+  background-position: center 60%;
+  opacity: 0.32;
+}
+
+.slide-deco--section .slide-deco__orb {
+  width: 50vmin;
+  height: 50vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(90px);
+  opacity: 0.15;
+}
+
+.slide-deco__brand {
+  position: absolute;
+  top: 14px;
+  left: 56px;
+  font-size: var(--theme-brand-size);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-navy);
+  opacity: 0.45;
+}
+
+.slide-cover .slide-deco__brand { display: none; }
+
+/* Corner ticks (blueprint alignment marks) */
+.slide-deco__ticks {
+  position: absolute;
+  inset: 18px;
+  border: 1px solid transparent;
+}
+
+.slide-deco__ticks::before,
+.slide-deco__ticks::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: rgba(59, 130, 196, 0.25);
+  border-style: solid;
+}
+
+.slide-deco__ticks::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.slide-deco__ticks::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* ─── Theme overrides on base slide.css ─────────────────────── */
+.slide {
+  background: linear-gradient(148deg, var(--theme-bg) 0%, var(--bg) 42%, var(--theme-bg-end) 100%);
+}
+
+.slide::before {
+  background-image:
+    linear-gradient(var(--theme-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--theme-grid) 1px, transparent 1px);
+}
+
+/* CAD frame — khối thông tin slide 1 (V3) */
+.cad-frame {
+  position: relative;
+}
+
+.cad-frame::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(26, 45, 69, 0.2);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+.cad-frame__corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid rgba(26, 45, 69, 0.45);
+  pointer-events: none;
+}
+
+.cad-frame__corner--tl { top: 4px; left: 4px; border-right: none; border-bottom: none; }
+.cad-frame__corner--tr { top: 4px; right: 4px; border-left: none; border-bottom: none; }
+.cad-frame__corner--bl { bottom: 4px; left: 4px; border-right: none; border-top: none; }
+.cad-frame__corner--br { bottom: 4px; right: 4px; border-left: none; border-top: none; }
+
+/* Glass panels — tinh chỉnh theo theme */
+.glass,
+.slide:not(.slide-cover) > .slide-header,
+.slide:not(.slide-cover) > .slide-body,
+.section-divider h1,
+.card {
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 12px 40px rgba(59, 130, 196, 0.12),
+    0 2px 8px rgba(0, 60, 100, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.overview-card {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 10px 32px rgba(59, 130, 196, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Accent stripe — tách khỏi chữ */
+.slide:not(.slide-cover) > .slide-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--accent-blue);
+}
+
+.slide[data-accent="purple"] > .slide-header::before { background: var(--accent-purple); }
+.slide[data-accent="orange"] > .slide-header::before { background: var(--accent-orange); }
+
+/* Biểu đồ / component — glass nhẹ */
+.arch-layer,
+.stake-quad,
+.kpi-light,
+.flow-node,
+.bar-track {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.arch-fe { background: rgba(59, 130, 196, 0.22); }
+.arch-be { background: rgba(124, 92, 191, 0.2); }
+.arch-db { background: rgba(224, 138, 58, 0.2); }
+
+.flow-critical { background: rgba(255, 205, 210, 0.75); }
+.flow-parallel { background: rgba(200, 230, 201, 0.75); }
+
+#nav.nav {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
