@@ -1,12 +1,55 @@
-<section class="slide" data-slide="24">
-          <div class="slide-header">STAKEHOLDER MANAGEMENT</div>
-          <div class="slide-body">
-            <div class="stake-grid">
-              <div class="stake-quad sq-ks"><div class="sq-title">Keep Satisfied</div>Board of Directors · System Admin<br><small>Executive Summary / báo cáo kỹ thuật S9–10</small></div>
-              <div class="stake-quad sq-mc"><div class="sq-title">Manage Closely</div>Product Owner · HR General Manager · Engineering Manager / Scrum Master<br><small>Daily Scrum, Sprint Review</small></div>
-              <div class="stake-quad sq-mo"><div class="sq-title">Monitor</div>Employee · Interviewer<br><small>Hướng dẫn sử dụng, FAQ tại UAT</small></div>
-              <div class="stake-quad sq-ki"><div class="sq-title">Keep Informed</div>HR Admin · 5 HR Manager · Developer · Quality Assurance<br><small>Refinement, demo, Jira</small></div>
-            </div>
+<section class="slide" id="slide-stake" data-slide="24">
+  <div class="slide-header">STAKEHOLDER MANAGEMENT</div>
+  <div class="slide-body pm-slide">
+    <p class="sens-kicker">
+      <span class="sens-kicker-label">Ma trận</span>
+      Power × Interest — chiến lược giao tiếp theo từng nhóm stakeholder
+    </p>
+    <div class="stake-matrix-chart">
+      <div class="stake-chart-area">
+        <span class="stake-y-label">Power <small>(Quyền)</small></span>
+        <span class="stake-y-tick stake-y-tick--high">Cao</span>
+        <span class="stake-y-tick stake-y-tick--low">Thấp</span>
+
+        <div class="stake-axis-lines" aria-hidden="true">
+          <span class="stake-line stake-line--y"></span>
+          <span class="stake-line stake-line--x"></span>
+        </div>
+
+        <div class="stake-grid stake-grid--v2">
+          <div class="stake-quad sq-ks">
+            <div class="sq-title">Keep Satisfied</div>
+            <p class="sq-sub">Quyền cao · Quan tâm thấp</p>
+            <p class="sq-actors">Board of Directors · System Admin</p>
+            <p class="sq-action">Executive Summary hàng tháng · báo cáo kỹ thuật S9–10</p>
           </div>
-          <div class="slide-footer">24 / 29</div>
-        </section>
+          <div class="stake-quad sq-mc">
+            <div class="sq-title">Manage Closely</div>
+            <p class="sq-sub">Quyền cao · Quan tâm cao</p>
+            <p class="sq-actors">PO · HR General Manager · EM / Scrum Master</p>
+            <p class="sq-action">Daily Scrum · Sprint Review mỗi Sprint</p>
+          </div>
+          <div class="stake-quad sq-mo">
+            <div class="sq-title">Monitor</div>
+            <p class="sq-sub">Quyền thấp · Quan tâm thấp</p>
+            <p class="sq-actors">Employee · Interviewer</p>
+            <p class="sq-action">User Manual · FAQ tại UAT &amp; Go-live</p>
+          </div>
+          <div class="stake-quad sq-ki">
+            <div class="sq-title">Keep Informed</div>
+            <p class="sq-sub">Quyền thấp · Quan tâm cao</p>
+            <p class="sq-actors">HR Admin · HR Manager · Developer · QA</p>
+            <p class="sq-action">Backlog Refinement · demo · Jira / email</p>
+          </div>
+        </div>
+
+        <div class="stake-x-rail">
+          <span class="stake-x-tick">Thấp</span>
+          <span class="stake-x-label">Interest <small>(Quan tâm)</small></span>
+          <span class="stake-x-tick">Cao</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">24 / 29</div>
+</section>

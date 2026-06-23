@@ -1,14 +1,96 @@
-<section class="slide" data-slide="25">
-          <div class="slide-header">GIÁM SÁT HIỆU SUẤT</div>
-          <div class="slide-body">
-            <p><strong>EVM:</strong> BAC = 1,29 tỷ · PV/Sprint ≈ 107,5 triệu · SPI = EV÷PV · CPI = EV÷AC</p>
-            <div class="kpi-row">
-              <div class="kpi-light kpi-green"><strong>Xanh</strong><br>SPI & CPI ≥ 0,9<br>Tiếp tục KH</div>
-              <div class="kpi-light kpi-yellow"><strong>Vàng</strong><br>&lt; 0,9 (≥ 0,8)<br>Daily Scrum</div>
-              <div class="kpi-light kpi-red"><strong>Đỏ</strong><br>&lt; 0,8<br>Leo thang</div>
-            </div>
-            <p><strong>KPI bổ sung:</strong> Velocity · Defect/MTTR (Critical ≤24h, Major ≤72h) · Story Points/Sprint</p>
-            <p><strong>Báo cáo:</strong> Sprint Status → PO & HR GM · Executive Summary hàng tháng → BOD</p>
-          </div>
-          <div class="slide-footer">25 / 29</div>
-        </section>
+<section class="slide" id="slide-evm" data-slide="25">
+  <div class="slide-header">GIÁM SÁT HIỆU SUẤT</div>
+  <div class="slide-body pm-slide">
+    <div class="pm-evm-bar">
+      <span><strong>BAC</strong> = 1,29 tỷ</span>
+      <span><strong>PV/Sprint</strong> ≈ 107,5 triệu</span>
+      <span><strong>SPI</strong> = EV ÷ PV</span>
+      <span><strong>CPI</strong> = EV ÷ AC</span>
+    </div>
+    <div class="pm-kpi-grid">
+      <article class="pm-kpi pm-kpi--green">
+        <span class="pm-kpi-level">Xanh</span>
+        <p class="pm-kpi-rule">SPI &amp; CPI ≥ 0,9</p>
+        <p class="pm-kpi-action">Tiếp tục kế hoạch</p>
+      </article>
+      <article class="pm-kpi pm-kpi--yellow">
+        <span class="pm-kpi-level">Vàng</span>
+        <p class="pm-kpi-rule">&lt; 0,9 (≥ 0,8)</p>
+        <p class="pm-kpi-action">Thảo luận Daily Scrum</p>
+      </article>
+      <article class="pm-kpi pm-kpi--red">
+        <span class="pm-kpi-level">Đỏ</span>
+        <p class="pm-kpi-rule">&lt; 0,8</p>
+        <p class="pm-kpi-action">Khắc phục + leo thang</p>
+      </article>
+    </div>
+    <div class="pm-grid pm-grid--2">
+      <div class="sens-panel pm-mini-panel">
+        <h4 class="pm-mini-title">KPI bổ sung</h4>
+        <p class="pm-mini-text">Velocity · Defect rate &amp; MTTR (Critical ≤24h, Major ≤72h) · Story Points/Sprint</p>
+      </div>
+      <div class="sens-panel pm-mini-panel">
+        <h4 class="pm-mini-title">Báo cáo</h4>
+        <p class="pm-mini-text">Sprint Status → PO &amp; HR GM · Executive Summary hàng tháng → BOD</p>
+      </div>
+    </div>
+    <div class="sens-panel pm-glossary-wrap">
+      <h4 class="pm-mini-title">Chú thích thuật ngữ EVM</h4>
+      <table class="pm-glossary">
+        <thead>
+          <tr>
+            <th>Viết tắt</th>
+            <th>Tiếng Việt (English)</th>
+            <th>Ý nghĩa</th>
+            <th>Giá trị / Ngưỡng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BAC</td>
+            <td>Ngân sách gốc (Budget at Completion)</td>
+            <td>Tổng ngân sách phê duyệt cho toàn bộ dự án</td>
+            <td><strong>1,29 tỷ</strong> VNĐ</td>
+          </tr>
+          <tr>
+            <td>PV</td>
+            <td>Giá trị kế hoạch (Planned Value)</td>
+            <td>Chi phí kế hoạch phân bổ theo tiến độ tại thời điểm đo</td>
+            <td>≈ <strong>107,5 triệu</strong>/Sprint</td>
+          </tr>
+          <tr>
+            <td>EV</td>
+            <td>Giá trị hoàn thành (Earned Value)</td>
+            <td>Giá trị công việc đã hoàn thành thực tế (theo % hoàn thành)</td>
+            <td>Cập nhật cuối mỗi Sprint</td>
+          </tr>
+          <tr>
+            <td>AC</td>
+            <td>Chi phí thực tế (Actual Cost)</td>
+            <td>Chi phí thực chi phát sinh đến thời điểm đo</td>
+            <td>Cập nhật cuối mỗi Sprint</td>
+          </tr>
+          <tr>
+            <td>SPI</td>
+            <td>Chỉ số hiệu suất tiến độ (Schedule Performance Index)</td>
+            <td>EV ÷ PV · <strong>=1:</strong> đúng tiến độ kế hoạch · <strong>&gt;1:</strong> vượt tiến độ (hoàn thành nhanh hơn dự kiến) · <strong>&lt;1:</strong> chậm tiến độ (EV &lt; PV), cần khắc phục</td>
+            <td>Công thức · ngưỡng <strong>≥0,9</strong></td>
+          </tr>
+          <tr>
+            <td>CPI</td>
+            <td>Chỉ số hiệu suất chi phí (Cost Performance Index)</td>
+            <td>EV ÷ AC · <strong>=1:</strong> chi phí đúng kế hoạch · <strong>&gt;1:</strong> hiệu quả chi phí (EV &gt; chi phí bỏ ra) · <strong>&lt;1:</strong> vượt chi phí (AC &gt; EV), nguy cơ vượt BAC</td>
+            <td>Công thức · ngưỡng <strong>≥0,9</strong></td>
+          </tr>
+          <tr>
+            <td>MTTR</td>
+            <td>Thời gian khắc phục TB (Mean Time To Repair)</td>
+            <td>Thời gian trung bình xử lý lỗi từ phát hiện đến đóng ticket</td>
+            <td>Critical <strong>≤24h</strong> · Major <strong>≤72h</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer">25 / 29</div>
+</section>

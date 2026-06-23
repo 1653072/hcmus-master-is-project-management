@@ -1,14 +1,28 @@
-<section class="slide" data-slide="27">
-          <div class="slide-header">QUẢN TRỊ RỦI RO</div>
-          <div class="slide-body">
-            <p><strong>Chiến lược:</strong> Avoid · Mitigate · Transfer · Accept — Ma trận Xác suất × Ảnh hưởng</p>
-            <table>
-              <tr><th>#</th><th>Rủi ro</th><th>Chiến lược</th></tr>
-              <tr><td>R1</td><td>Thiếu KN GenAI sàng lọc CV</td><td>Training S2, POC S5, fallback, ngưỡng ≥80%</td></tr>
-              <tr><td>R2</td><td>Tích hợp chéo CC–Lương–TS</td><td>Integration test S4–6, ACID, regression</td></tr>
-              <tr><td>R3</td><td>API bên thứ 3 không ổn định</td><td>Mock API, retry×3, circuit breaker</td></tr>
-            </table>
-            <p class="note">Risk Register cập nhật cuối mỗi Sprint; Risk Review 30 phút tại Retrospective</p>
-          </div>
-          <div class="slide-footer">27 / 29</div>
-        </section>
+<section class="slide" id="slide-risk" data-slide="27">
+  <div class="slide-header">QUẢN TRỊ RỦI RO</div>
+  <div class="slide-body pm-slide">
+    <p class="sens-kicker sens-kicker--warn">
+      <span class="sens-kicker-label">Phương pháp</span>
+      Avoid · Mitigate · Transfer · Accept — Ma trận <strong>Xác suất × Ảnh hưởng</strong>
+    </p>
+    <div class="cost-panel-grid cost-panel-grid--risk">
+      <article class="cost-panel-card cost-panel-card--orange">
+        <span class="cost-panel-badge">R1</span>
+        <h4 class="cost-panel-title">Thiếu KN GenAI sàng lọc CV</h4>
+        <p class="cost-panel-text">Training S2 · POC S5 · fallback thủ công · ngưỡng AI ≥ 80%</p>
+      </article>
+      <article class="cost-panel-card cost-panel-card--fpa">
+        <span class="cost-panel-badge">R2</span>
+        <h4 class="cost-panel-title">Tích hợp chéo CC – Lương – TS</h4>
+        <p class="cost-panel-text">Integration test S4–6 · ACID · regression sau mỗi Sprint</p>
+      </article>
+      <article class="cost-panel-card cost-panel-card--ucp">
+        <span class="cost-panel-badge">R3</span>
+        <h4 class="cost-panel-title">API bên thứ 3 không ổn định</h4>
+        <p class="cost-panel-text">Mock API · retry ×3 · circuit breaker · SLA fallback</p>
+      </article>
+    </div>
+    <p class="sens-footnote">Risk Register cập nhật cuối mỗi Sprint · Risk Review 30 phút tại Retrospective</p>
+  </div>
+  <div class="slide-footer">27 / 29</div>
+</section>

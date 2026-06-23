@@ -333,11 +333,11 @@
               <tbody>
                 <tr>
                   <td>TAW</td>
-                  <td>Giá trị điểm các tác nhân (Total Actor Weight): <br><b>13 tác nhân × 4 điểm = 52 điểm</b></td>
+                  <td>Giá trị điểm các tác nhân (Total Actor Weight): 13 tác nhân × 4 điểm = 52</td>
                 </tr>
                 <tr>
                   <td>TBF</td>
-                  <td>Giá trị điểm các trường hợp sử dụng (Transaction Bundle Factor): <br><b>Tổng 21 UC = 255</b></td>
+                  <td>Giá trị điểm các trường hợp sử dụng (Transaction Bundle Factor): tổng 21 UC = 255</td>
                 </tr>
                 <tr>
                   <td>UUCP</td>
@@ -798,21 +798,54 @@
     </section>
 
     <!-- SLIDE 17 -->
-    <section class="slide" data-slide="17">
-              <div class="slide-header">BẢNG ĐỐI CHIẾU GENAI & KẾT LUẬN</div>
-              <div class="slide-body">
-                <table class="compare-table">
-                  <tr><th>Tiêu chí</th><th>UCP In-house</th><th>FPA Thuê ngoài</th></tr>
-                  <tr><td>Ngân sách</td><td>Giảm mạnh (1,29→751 triệu)</td><td>Không đổi</td></tr>
-                  <tr><td>Ai hưởng lợi?</td><td>Doanh nghiệp</td><td>Nhà thầu</td></tr>
-                  <tr><td>Chi phí AI</td><td>Tự trả thêm</td><td>Đã gói trong giá</td></tr>
-                  <tr><td>Lợi ích KH</td><td>Tiết kiệm tiền mặt</td><td>Time-to-market</td></tr>
-                </table>
-                <div id="chart-genai-compare"></div>
-                <p class="card" style="margin-top:8px;"><strong>Kết luận:</strong> UCP + GenAI 80% tối ưu — sở hữu mã nguồn, ngân sách &lt; 1 tỷ. Thuê ngoài: dùng GenAI đàm phán giá/scope.</p>
-              </div>
-              <div class="slide-footer">17 / 29</div>
-            </section>
+    <section class="slide" id="slide-genai-compare" data-slide="17">
+      <div class="slide-header">BẢNG ĐỐI CHIẾU GENAI &amp; KẾT LUẬN</div>
+      <div class="slide-body pm-slide">
+        <p class="sens-kicker sens-kicker--genai">
+          <span class="sens-kicker-label">GenAI</span>
+          Bất đối xứng tài chính — UCP in-house hưởng lợi ngân sách; FPA thuê ngoài hưởng lợi time-to-market
+        </p>
+        <div class="sens-panel sens-compare-panel">
+          <table class="sens-table sens-compare-table">
+            <thead>
+              <tr>
+                <th>Tiêu chí</th>
+                <th class="sens-col-ucp">UCP In-house</th>
+                <th class="sens-col-fpa">FPA Thuê ngoài</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ngân sách</td>
+                <td><span class="sens-trend sens-trend--down">Giảm mạnh 1,29 → 751 triệu</span></td>
+                <td><span class="sens-cell-neutral">Không đổi</span></td>
+              </tr>
+              <tr>
+                <td>Ai hưởng lợi?</td>
+                <td><strong>Doanh nghiệp</strong></td>
+                <td><strong>Nhà thầu</strong></td>
+              </tr>
+              <tr>
+                <td>Chi phí AI</td>
+                <td>Tự trả thêm</td>
+                <td>Đã gói trong giá</td>
+              </tr>
+              <tr>
+                <td>Lợi ích KH</td>
+                <td>Tiết kiệm tiền mặt</td>
+                <td>Time-to-market</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="chart-genai-compare"></div>
+        <p class="sens-insight sens-insight--good">
+          <strong>Kết luận:</strong> <strong>UCP + GenAI 80%</strong> tối ưu — sở hữu mã nguồn, ngân sách &lt; 1 tỷ.
+          Thuê ngoài: dùng GenAI làm <strong>vũ khí đàm phán</strong> giá/scope.
+        </p>
+      </div>
+      <div class="slide-footer">17 / 29</div>
+    </section>
 
     <!-- SLIDE 18 -->
     <section class="slide" data-slide="18">
@@ -821,216 +854,551 @@
             </section>
 
     <!-- SLIDE 19 -->
-    <section class="slide" data-slide="19">
-              <div class="slide-header">SCRUM: LÝ DO CHỌN, ƯU/NHƯỢC & KHẮC PHỤC (1/2)</div>
-              <div class="slide-body">
-                <p><strong>Lý do chọn Scrum:</strong></p>
-                <ul>
-                  <li>8 nhóm, 21 UC — phát triển theo <strong>increment</strong></li>
-                  <li>Yêu cầu HR dễ thay đổi (phễu tuyển dụng, phép, onboarding...)</li>
-                  <li>Stakeholder phản hồi liên tục qua Sprint Review</li>
-                  <li>Hybrid: tài liệu PM (UCP, FPA, WBS, Risk) + Scrum 12 Sprint × 2 tuần</li>
-                </ul>
-                <div class="card" style="margin-top:10px;">
-                  <strong>Ưu điểm:</strong> phản hồi sớm · linh hoạt · Increment mỗi Sprint · giảm rủi ro tích hợp muộn
-                </div>
-                <p style="margin-top:8px;"><strong>Không chọn Waterfall/RUP:</strong> yêu cầu không ổn định; RUP quá cồng kềnh cho quy mô nhóm</p>
-              </div>
-              <div class="slide-footer">19 / 29</div>
-            </section>
+    <section class="slide" id="slide-scrum-1" data-slide="19">
+      <div class="slide-header">SCRUM: LÝ DO CHỌN, ƯU/NHƯỢC &amp; KHẮC PHỤC (1/2)</div>
+      <div class="slide-body pm-slide">
+        <p class="sens-kicker">
+          <span class="sens-kicker-label">Hybrid</span>
+          Tài liệu PM (UCP, FPA, WBS, Risk) + thực thi <strong>Scrum 12 Sprint × 2 tuần</strong>
+        </p>
+        <div class="pm-grid pm-grid--2">
+          <section class="pm-section">
+            <h3 class="cost-block-title">Lý do chọn Scrum</h3>
+            <div class="pm-point-grid">
+              <article class="pm-point pm-point--blue">
+                <span class="pm-point-num">1</span>
+                <p><strong>8 nhóm · 21 UC</strong> — phát triển theo increment, deliver từng Sprint</p>
+              </article>
+              <article class="pm-point pm-point--purple">
+                <span class="pm-point-num">2</span>
+                <p>Yêu cầu HR <strong>dễ thay đổi</strong> — phễu tuyển dụng, phép, onboarding</p>
+              </article>
+              <article class="pm-point pm-point--orange">
+                <span class="pm-point-num">3</span>
+                <p>Stakeholder <strong>phản hồi liên tục</strong> qua Sprint Review</p>
+              </article>
+              <article class="pm-point pm-point--green">
+                <span class="pm-point-num">4</span>
+                <p>Quy mô nhóm <strong>5 kỹ sư</strong> — Agile phù hợp hơn RUP cồng kềnh</p>
+              </article>
+            </div>
+          </section>
+          <section class="pm-section">
+            <h3 class="cost-block-title cost-block-title--green">Ưu điểm</h3>
+            <div class="pm-tag-row">
+              <span class="pm-tag">Phản hồi sớm</span>
+              <span class="pm-tag">Linh hoạt thay đổi</span>
+              <span class="pm-tag">Increment mỗi Sprint</span>
+              <span class="pm-tag">Giảm rủi ro tích hợp muộn</span>
+            </div>
+            <div class="pm-callout pm-callout--warn">
+              <strong>Không chọn Waterfall / RUP</strong>
+              <p>Yêu cầu không ổn định; RUP quá cồng kềnh cho quy mô và tốc độ dự án HRIS.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="slide-footer">19 / 29</div>
+    </section>
 
     <!-- SLIDE 20 -->
-    <section class="slide" data-slide="20">
-              <div class="slide-header">SCRUM: ƯU/NHƯỢC & KHẮC PHỤC (2/2)</div>
-              <div class="slide-body">
-                <table>
-                  <tr><th>Nhược điểm</th><th>Biện pháp khắc phục</th></tr>
-                  <tr><td>Scope creep</td><td>PO ưu tiên backlog; giới hạn scope Sprint; DoD rõ</td></tr>
-                  <tr><td>Thiếu tài liệu KT</td><td>Test Report/Sprint; duy trì Architecture & Design Doc</td></tr>
-                  <tr><td>Ước lượng không ổn định</td><td>UCP/FPA baseline; Gantt cập nhật mỗi Sprint</td></tr>
-                  <tr><td>Phụ thuộc PO/SM</td><td>Phân công rõ; EM kiêm SM — Daily Scrum & Retro</td></tr>
-                  <tr><td>Rủi ro tích hợp</td><td>Integration Sprint; CI/CD; test tự động NFR</td></tr>
-                </table>
-              </div>
-              <div class="slide-footer">20 / 29</div>
-            </section>
+    <section class="slide" id="slide-scrum-2" data-slide="20">
+      <div class="slide-header">SCRUM: ƯU/NHƯỢC &amp; KHẮC PHỤC (2/2)</div>
+      <div class="slide-body pm-slide">
+        <p class="sens-kicker sens-kicker--warn">
+          <span class="sens-kicker-label">Khắc phục</span>
+          Mỗi nhược điểm Scrum được gắn biện pháp cụ thể — PO, EM/SM và quy trình CI/CD
+        </p>
+        <div class="sens-panel sens-compare-panel">
+          <table class="sens-table pm-mitigate-table">
+            <thead>
+              <tr>
+                <th>Nhược điểm</th>
+                <th>Biện pháp khắc phục</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Scope creep</td>
+                <td>PO ưu tiên backlog · giới hạn scope Sprint Planning · DoD rõ</td>
+              </tr>
+              <tr>
+                <td>Thiếu tài liệu KT</td>
+                <td>Test Report mỗi Sprint · duy trì Architecture &amp; Design Doc</td>
+              </tr>
+              <tr>
+                <td>Ước lượng không ổn định</td>
+                <td>UCP/FPA baseline · Gantt cập nhật sau mỗi Sprint</td>
+              </tr>
+              <tr>
+                <td>Phụ thuộc PO/SM</td>
+                <td>Phân công rõ · EM kiêm SM — Daily Scrum &amp; Retrospective</td>
+              </tr>
+              <tr>
+                <td>Rủi ro tích hợp</td>
+                <td>Integration Sprint · CI/CD · test tự động NFR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="slide-footer">20 / 29</div>
+    </section>
 
     <!-- SLIDE 21 -->
-    <section class="slide" data-slide="21">
-              <div class="slide-header">CƠ CẤU NHÂN SỰ & TRAINING PLAN</div>
-              <div class="slide-body two-col">
-                <div>
-                  <table>
-                    <tr><th>Vai trò</th><th>SL</th><th>Trách nhiệm</th></tr>
-                    <tr><td>Product Owner</td><td>1</td><td>Backlog, nghiệp vụ HR</td></tr>
-                    <tr><td>Engineering Manager</td><td>1</td><td>Kiến trúc, SM & Tech Lead</td></tr>
-                    <tr><td>Full-stack AI Engineers</td><td>3</td><td>Dev FE/BE + GenAI</td></tr>
-                    <tr><td>QA Engineer</td><td>1</td><td>Test, CI/CD, load 500 CCU</td></tr>
-                  </table>
-                </div>
-                <div class="card">
-                  <p><strong>Training Plan — Sprint 2:</strong></p>
-                  <ul>
-                    <li>Cursor IDE, Copilot, Prompt Engineering</li>
-                    <li>Sau khi CI/CD + DB + RBAC xong</li>
-                    <li>On-the-job + Cross-training</li>
-                    <li>Mục tiêu: sẵn sàng Core Backend Sprint 3</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="slide-footer">21 / 29</div>
-            </section>
+    <section class="slide" id="slide-team" data-slide="21">
+      <div class="slide-header">CƠ CẤU NHÂN SỰ &amp; TRAINING PLAN</div>
+      <div class="slide-body pm-slide">
+        <p class="sens-kicker">
+          <span class="sens-kicker-label">Đội ngũ</span>
+          <strong>5 kỹ sư full-time + PO</strong> · In-house · sở hữu 100% mã nguồn
+        </p>
+        <div class="sens-layout">
+          <div class="sens-panel">
+            <table class="sens-table">
+              <thead>
+                <tr>
+                  <th>Vai trò</th>
+                  <th>SL</th>
+                  <th>Trách nhiệm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Product Owner</td>
+                  <td>1</td>
+                  <td>Backlog, nghiệp vụ HR</td>
+                </tr>
+                <tr>
+                  <td>Engineering Manager</td>
+                  <td>1</td>
+                  <td>Kiến trúc, SM &amp; Tech Lead</td>
+                </tr>
+                <tr>
+                  <td>Full-stack AI Engineers</td>
+                  <td>3</td>
+                  <td>Dev FE/BE + GenAI</td>
+                </tr>
+                <tr>
+                  <td>QA Engineer</td>
+                  <td>1</td>
+                  <td>Test, CI/CD, load 500 CCU</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="sens-panel pm-training-panel">
+            <h3 class="cost-block-title cost-block-title--purple">Training Plan — Sprint 2</h3>
+            <p class="pm-training-when">Tuần 3–4 · sau khi CI/CD + DB + RBAC hoàn tất</p>
+            <ul class="pm-list">
+              <li><strong>Kỹ năng:</strong> Cursor IDE, Copilot, Prompt Engineering</li>
+              <li><strong>Phương pháp:</strong> On-the-job + Cross-training</li>
+              <li><strong>Mục tiêu:</strong> Sẵn sàng Core Backend từ Sprint 3</li>
+            </ul>
+            <div class="pm-callout pm-callout--info">
+              GenAI tích hợp IDE ngay sau nền tảng kỹ thuật — không đào tạo sớm khi chưa có repo &amp; pipeline.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">21 / 29</div>
+    </section>
 
     <!-- SLIDE 22 -->
-    <section class="slide" data-slide="22">
-              <div class="slide-header">WBS: 5 GIAI ĐOẠN</div>
-              <div class="slide-body">
-                <div class="timeline">
-                  <div class="tl-phase tl-p1"><strong>G1</strong><span>S1–2</span><span>DB, CI/CD, RBAC, GenAI</span></div>
-                  <div class="tl-phase tl-p2"><strong>G2</strong><span>S3–6</span><span>Backend Core, Payroll, Tuyển dụng, AES-256</span></div>
-                  <div class="tl-phase tl-p3"><strong>G3</strong><span>S7–8</span><span>UI Responsive, Dashboard, Kanban</span></div>
-                  <div class="tl-phase tl-p4"><strong>G4</strong><span>S9–10</span><span>Load 500 CCU, Pen-test</span></div>
-                  <div class="tl-phase tl-p5"><strong>G5</strong><span>S11–12</span><span>UAT, Go-live</span></div>
-                </div>
-                <table style="margin-top:10px;">
-                  <tr><th>Giai đoạn</th><th>Sprint</th><th>Mục tiêu</th></tr>
-                  <tr><td>1. Khởi tạo & KT</td><td>S1–2</td><td>DB ACID, CI/CD, RBAC</td></tr>
-                  <tr><td>2. Backend</td><td>S3–6</td><td>API lõi, lương, tuyển dụng</td></tr>
-                  <tr><td>3. Frontend</td><td>S7–8</td><td>UI, Dashboard, Kanban</td></tr>
-                  <tr><td>4. Test</td><td>S9–10</td><td>Load test, Pen-test</td></tr>
-                  <tr><td>5. Triển khai</td><td>S11–12</td><td>UAT, Production</td></tr>
-                </table>
-                <p><strong>Tổng:</strong> 6 tháng · 12 Sprint · 29 PM</p>
-              </div>
-              <div class="slide-footer">22 / 29</div>
-            </section>
+    <section class="slide" id="slide-wbs" data-slide="22">
+      <div class="slide-header">WBS: 5 GIAI ĐOẠN</div>
+      <div class="slide-body pm-slide">
+        <div class="wbs-track" aria-hidden="true">
+          <div class="wbs-seg wbs-seg--g1"><span class="wbs-seg-id">G1</span><span class="wbs-seg-sprint">Sprint 1–2</span></div>
+          <div class="wbs-seg wbs-seg--g2 wbs-seg--wide"><span class="wbs-seg-id">G2</span><span class="wbs-seg-sprint">Sprint 3–6</span></div>
+          <div class="wbs-seg wbs-seg--g3"><span class="wbs-seg-id">G3</span><span class="wbs-seg-sprint">Sprint 7–8</span></div>
+          <div class="wbs-seg wbs-seg--g4"><span class="wbs-seg-id">G4</span><span class="wbs-seg-sprint">Sprint 9–10</span></div>
+          <div class="wbs-seg wbs-seg--g5"><span class="wbs-seg-id">G5</span><span class="wbs-seg-sprint">Sprint 11–12</span></div>
+        </div>
+        <div class="sens-panel sens-compare-panel">
+          <table class="sens-table wbs-table">
+            <thead>
+              <tr>
+                <th>Giai đoạn</th>
+                <th>Sprint</th>
+                <th>Mục tiêu chính</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="wbs-row wbs-row--g1">
+                <td>1. Khởi tạo &amp; Kiến trúc</td>
+                <td>Sprint 1–2</td>
+                <td>DB ACID, CI/CD, RBAC, GenAI IDE</td>
+              </tr>
+              <tr class="wbs-row wbs-row--g2">
+                <td>2. Core Backend &amp; APIs</td>
+                <td>Sprint 3–6</td>
+                <td>Hồ sơ NS, chấm công, lương/OT, tuyển dụng, AES-256</td>
+              </tr>
+              <tr class="wbs-row wbs-row--g3">
+                <td>3. UI/UX Frontend</td>
+                <td>Sprint 7–8</td>
+                <td>Web responsive, Dashboard, Kanban tuyển dụng</td>
+              </tr>
+              <tr class="wbs-row wbs-row--g4">
+                <td>4. Load test &amp; Pen-test</td>
+                <td>Sprint 9–10</td>
+                <td>Ép tải 500 CCU, quét XSS/SQLi, fix Critical/High</td>
+              </tr>
+              <tr class="wbs-row wbs-row--g5">
+                <td>5. UAT &amp; Go-live</td>
+                <td>Sprint 11–12</td>
+                <td>UAT với HR, User Manual, deploy Production</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wbs-summary"><strong>Tổng:</strong> 6 tháng · 12 Sprint · 29 Person-Month</p>
+      </div>
+      <div class="slide-footer">22 / 29</div>
+    </section>
 
     <!-- SLIDE 23 -->
-    <section class="slide" data-slide="23">
-              <div class="slide-header">CRITICAL PATH</div>
-              <div class="slide-body">
-                <div class="cpath-v2">
-                  <p class="cpath-label cpath-label--critical">Đường găng (Critical Path)</p>
-                  <div class="cpath-track cpath-track--critical">
-                    <div class="cpath-nodes">
-                      <div class="cpath-node"><span class="cpath-id">1.1</span><span class="cpath-name">DB ACID</span></div>
-                      <span class="cpath-connector"></span>
-                      <div class="cpath-node"><span class="cpath-id">2.1</span><span class="cpath-name">Backend Core</span></div>
-                      <span class="cpath-connector"></span>
-                      <div class="cpath-node"><span class="cpath-id">4.1</span><span class="cpath-name">Load 500 CCU</span></div>
-                      <span class="cpath-connector cpath-connector--plus">+</span>
-                      <div class="cpath-node"><span class="cpath-id">4.2</span><span class="cpath-name">Pen-test</span></div>
-                      <span class="cpath-connector"></span>
-                      <div class="cpath-node"><span class="cpath-id">5.1</span><span class="cpath-name">UAT</span></div>
-                    </div>
-                  </div>
-                  <p class="cpath-label cpath-label--parallel">Song song (có float)</p>
-                  <div class="cpath-track cpath-track--parallel">
-                    <div class="cpath-nodes cpath-nodes--parallel">
-                      <div class="cpath-node"><span class="cpath-id">1.2</span><span class="cpath-name">RBAC</span></div>
-                      <div class="cpath-node"><span class="cpath-id">3.1–3.2</span><span class="cpath-name">UI / UX</span></div>
-                      <div class="cpath-node"><span class="cpath-id">2.2</span><span class="cpath-name">AES-256</span></div>
-                      <div class="cpath-node"><span class="cpath-id">5.2</span><span class="cpath-name">Tài liệu</span></div>
-                    </div>
-                  </div>
-                </div>
-                <p class="note">Trễ S1 / S3 / S9 / S11 → leo thang; tăng GenAI token nếu Backend chậm</p>
+    <section class="slide" id="slide-cpath" data-slide="23">
+      <div class="slide-header">CRITICAL PATH</div>
+      <div class="slide-body pm-slide">
+        <div class="sens-panel cpath-panel">
+          <div class="cpath-v2">
+            <p class="cpath-label cpath-label--critical">Đường găng (Critical Path)</p>
+            <div class="cpath-track cpath-track--critical">
+              <div class="cpath-nodes">
+                <div class="cpath-node"><span class="cpath-id">1.1</span><span class="cpath-name">DB ACID</span></div>
+                <span class="cpath-connector"></span>
+                <div class="cpath-node"><span class="cpath-id">2.1</span><span class="cpath-name">Backend Core</span></div>
+                <span class="cpath-connector"></span>
+                <div class="cpath-node"><span class="cpath-id">4.1</span><span class="cpath-name">Load 500 CCU</span></div>
+                <span class="cpath-connector cpath-connector--plus">+</span>
+                <div class="cpath-node"><span class="cpath-id">4.2</span><span class="cpath-name">Pen-test</span></div>
+                <span class="cpath-connector"></span>
+                <div class="cpath-node"><span class="cpath-id">5.1</span><span class="cpath-name">UAT</span></div>
               </div>
-              <div class="slide-footer">23 / 29</div>
-            </section>
+            </div>
+            <p class="cpath-label cpath-label--parallel">Song song (có float)</p>
+            <div class="cpath-track cpath-track--parallel">
+              <div class="cpath-nodes cpath-nodes--parallel">
+                <div class="cpath-node"><span class="cpath-id">1.2</span><span class="cpath-name">RBAC</span></div>
+                <div class="cpath-node"><span class="cpath-id">3.1–3.2</span><span class="cpath-name">UI / UX</span></div>
+                <div class="cpath-node"><span class="cpath-id">2.2</span><span class="cpath-name">AES-256</span></div>
+                <div class="cpath-node"><span class="cpath-id">5.2</span><span class="cpath-name">Tài liệu</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pm-grid pm-grid--2">
+          <p class="pm-callout pm-callout--danger">
+            <strong>Leo thang khi trễ:</strong> S1 / S3 / S9 / S11 — kích hoạt quy trình 4 cấp
+          </p>
+          <p class="pm-callout pm-callout--info">
+            <strong>Mitigate:</strong> Tăng GenAI token nếu Backend chậm; song song hóa RBAC &amp; UI
+          </p>
+        </div>
+      </div>
+      <div class="slide-footer">23 / 29</div>
+    </section>
 
     <!-- SLIDE 24 -->
-    <section class="slide" data-slide="24">
-              <div class="slide-header">STAKEHOLDER MANAGEMENT</div>
-              <div class="slide-body">
-                <div class="stake-grid">
-                  <div class="stake-quad sq-ks"><div class="sq-title">Keep Satisfied</div>Board of Directors · System Admin<br><small>Executive Summary / báo cáo kỹ thuật S9–10</small></div>
-                  <div class="stake-quad sq-mc"><div class="sq-title">Manage Closely</div>Product Owner · HR General Manager · Engineering Manager / Scrum Master<br><small>Daily Scrum, Sprint Review</small></div>
-                  <div class="stake-quad sq-mo"><div class="sq-title">Monitor</div>Employee · Interviewer<br><small>Hướng dẫn sử dụng, FAQ tại UAT</small></div>
-                  <div class="stake-quad sq-ki"><div class="sq-title">Keep Informed</div>HR Admin · 5 HR Manager · Developer · Quality Assurance<br><small>Refinement, demo, Jira</small></div>
-                </div>
+    <section class="slide" id="slide-stake" data-slide="24">
+      <div class="slide-header">STAKEHOLDER MANAGEMENT</div>
+      <div class="slide-body pm-slide">
+        <p class="sens-kicker">
+          <span class="sens-kicker-label">Ma trận</span>
+          Power × Interest — chiến lược giao tiếp theo từng nhóm stakeholder
+        </p>
+        <div class="stake-matrix-chart">
+          <div class="stake-chart-area">
+            <span class="stake-y-label">Power <small>(Quyền)</small></span>
+            <span class="stake-y-tick stake-y-tick--high">Cao</span>
+            <span class="stake-y-tick stake-y-tick--low">Thấp</span>
+    
+            <div class="stake-axis-lines" aria-hidden="true">
+              <span class="stake-line stake-line--y"></span>
+              <span class="stake-line stake-line--x"></span>
+            </div>
+    
+            <div class="stake-grid stake-grid--v2">
+              <div class="stake-quad sq-ks">
+                <div class="sq-title">Keep Satisfied</div>
+                <p class="sq-sub">Quyền cao · Quan tâm thấp</p>
+                <p class="sq-actors">Board of Directors · System Admin</p>
+                <p class="sq-action">Executive Summary hàng tháng · báo cáo kỹ thuật S9–10</p>
               </div>
-              <div class="slide-footer">24 / 29</div>
-            </section>
+              <div class="stake-quad sq-mc">
+                <div class="sq-title">Manage Closely</div>
+                <p class="sq-sub">Quyền cao · Quan tâm cao</p>
+                <p class="sq-actors">PO · HR General Manager · EM / Scrum Master</p>
+                <p class="sq-action">Daily Scrum · Sprint Review mỗi Sprint</p>
+              </div>
+              <div class="stake-quad sq-mo">
+                <div class="sq-title">Monitor</div>
+                <p class="sq-sub">Quyền thấp · Quan tâm thấp</p>
+                <p class="sq-actors">Employee · Interviewer</p>
+                <p class="sq-action">User Manual · FAQ tại UAT &amp; Go-live</p>
+              </div>
+              <div class="stake-quad sq-ki">
+                <div class="sq-title">Keep Informed</div>
+                <p class="sq-sub">Quyền thấp · Quan tâm cao</p>
+                <p class="sq-actors">HR Admin · HR Manager · Developer · QA</p>
+                <p class="sq-action">Backlog Refinement · demo · Jira / email</p>
+              </div>
+            </div>
+    
+            <div class="stake-x-rail">
+              <span class="stake-x-tick">Thấp</span>
+              <span class="stake-x-label">Interest <small>(Quan tâm)</small></span>
+              <span class="stake-x-tick">Cao</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">24 / 29</div>
+    </section>
 
     <!-- SLIDE 25 -->
-    <section class="slide" data-slide="25">
-              <div class="slide-header">GIÁM SÁT HIỆU SUẤT</div>
-              <div class="slide-body">
-                <p><strong>EVM:</strong> BAC = 1,29 tỷ · PV/Sprint ≈ 107,5 triệu · SPI = EV÷PV · CPI = EV÷AC</p>
-                <div class="kpi-row">
-                  <div class="kpi-light kpi-green"><strong>Xanh</strong><br>SPI & CPI ≥ 0,9<br>Tiếp tục KH</div>
-                  <div class="kpi-light kpi-yellow"><strong>Vàng</strong><br>&lt; 0,9 (≥ 0,8)<br>Daily Scrum</div>
-                  <div class="kpi-light kpi-red"><strong>Đỏ</strong><br>&lt; 0,8<br>Leo thang</div>
-                </div>
-                <p><strong>KPI bổ sung:</strong> Velocity · Defect/MTTR (Critical ≤24h, Major ≤72h) · Story Points/Sprint</p>
-                <p><strong>Báo cáo:</strong> Sprint Status → PO & HR GM · Executive Summary hàng tháng → BOD</p>
-              </div>
-              <div class="slide-footer">25 / 29</div>
-            </section>
+    <section class="slide" id="slide-evm" data-slide="25">
+      <div class="slide-header">GIÁM SÁT HIỆU SUẤT</div>
+      <div class="slide-body pm-slide">
+        <div class="pm-evm-bar">
+          <span><strong>BAC</strong> = 1,29 tỷ</span>
+          <span><strong>PV/Sprint</strong> ≈ 107,5 triệu</span>
+          <span><strong>SPI</strong> = EV ÷ PV</span>
+          <span><strong>CPI</strong> = EV ÷ AC</span>
+        </div>
+        <div class="pm-kpi-grid">
+          <article class="pm-kpi pm-kpi--green">
+            <span class="pm-kpi-level">Xanh</span>
+            <p class="pm-kpi-rule">SPI &amp; CPI ≥ 0,9</p>
+            <p class="pm-kpi-action">Tiếp tục kế hoạch</p>
+          </article>
+          <article class="pm-kpi pm-kpi--yellow">
+            <span class="pm-kpi-level">Vàng</span>
+            <p class="pm-kpi-rule">&lt; 0,9 (≥ 0,8)</p>
+            <p class="pm-kpi-action">Thảo luận Daily Scrum</p>
+          </article>
+          <article class="pm-kpi pm-kpi--red">
+            <span class="pm-kpi-level">Đỏ</span>
+            <p class="pm-kpi-rule">&lt; 0,8</p>
+            <p class="pm-kpi-action">Khắc phục + leo thang</p>
+          </article>
+        </div>
+        <div class="pm-grid pm-grid--2">
+          <div class="sens-panel pm-mini-panel">
+            <h4 class="pm-mini-title">KPI bổ sung</h4>
+            <p class="pm-mini-text">Velocity · Defect rate &amp; MTTR (Critical ≤24h, Major ≤72h) · Story Points/Sprint</p>
+          </div>
+          <div class="sens-panel pm-mini-panel">
+            <h4 class="pm-mini-title">Báo cáo</h4>
+            <p class="pm-mini-text">Sprint Status → PO &amp; HR GM · Executive Summary hàng tháng → BOD</p>
+          </div>
+        </div>
+        <div class="sens-panel pm-glossary-wrap">
+          <h4 class="pm-mini-title">Chú thích thuật ngữ EVM</h4>
+          <table class="pm-glossary">
+            <thead>
+              <tr>
+                <th>Viết tắt</th>
+                <th>Tiếng Việt (English)</th>
+                <th>Ý nghĩa</th>
+                <th>Giá trị / Ngưỡng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BAC</td>
+                <td>Ngân sách gốc (Budget at Completion)</td>
+                <td>Tổng ngân sách phê duyệt cho toàn bộ dự án</td>
+                <td><strong>1,29 tỷ</strong> VNĐ</td>
+              </tr>
+              <tr>
+                <td>PV</td>
+                <td>Giá trị kế hoạch (Planned Value)</td>
+                <td>Chi phí kế hoạch phân bổ theo tiến độ tại thời điểm đo</td>
+                <td>≈ <strong>107,5 triệu</strong>/Sprint</td>
+              </tr>
+              <tr>
+                <td>EV</td>
+                <td>Giá trị hoàn thành (Earned Value)</td>
+                <td>Giá trị công việc đã hoàn thành thực tế (theo % hoàn thành)</td>
+                <td>Cập nhật cuối mỗi Sprint</td>
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>Chi phí thực tế (Actual Cost)</td>
+                <td>Chi phí thực chi phát sinh đến thời điểm đo</td>
+                <td>Cập nhật cuối mỗi Sprint</td>
+              </tr>
+              <tr>
+                <td>SPI</td>
+                <td>Chỉ số hiệu suất tiến độ (Schedule Performance Index)</td>
+                <td>EV ÷ PV · <strong>=1:</strong> đúng tiến độ kế hoạch · <strong>&gt;1:</strong> vượt tiến độ (hoàn thành nhanh hơn dự kiến) · <strong>&lt;1:</strong> chậm tiến độ (EV &lt; PV), cần khắc phục</td>
+                <td>Công thức · ngưỡng <strong>≥0,9</strong></td>
+              </tr>
+              <tr>
+                <td>CPI</td>
+                <td>Chỉ số hiệu suất chi phí (Cost Performance Index)</td>
+                <td>EV ÷ AC · <strong>=1:</strong> chi phí đúng kế hoạch · <strong>&gt;1:</strong> hiệu quả chi phí (EV &gt; chi phí bỏ ra) · <strong>&lt;1:</strong> vượt chi phí (AC &gt; EV), nguy cơ vượt BAC</td>
+                <td>Công thức · ngưỡng <strong>≥0,9</strong></td>
+              </tr>
+              <tr>
+                <td>MTTR</td>
+                <td>Thời gian khắc phục TB (Mean Time To Repair)</td>
+                <td>Thời gian trung bình xử lý lỗi từ phát hiện đến đóng ticket</td>
+                <td>Critical <strong>≤24h</strong> · Major <strong>≤72h</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="slide-footer">25 / 29</div>
+    </section>
 
     <!-- SLIDE 26 -->
-    <section class="slide" data-slide="26">
-              <div class="slide-header">QUY TRÌNH LEO THANG SỰ CỐ</div>
-              <div class="slide-body">
-                <table>
-                  <tr><th>Cấp</th><th>Vai trò</th><th>Điều kiện</th><th>Phản hồi</th></tr>
-                  <tr><td>1</td><td>Dev + EM</td><td>SPI/CPI&lt;0,9; Critical&gt;24h</td><td>4 giờ</td></tr>
-                  <tr><td>2</td><td>PO + EM</td><td>2 Sprint SPI&lt;0,8; ≥3 US đổi</td><td>24 giờ</td></tr>
-                  <tr><td>3</td><td>HR GM</td><td>Critical Path trễ; downtime&gt;NFR</td><td>48 giờ</td></tr>
-                  <tr><td>4</td><td>BOD</td><td>Vượt BAC; Go-live trễ&gt;2 tuần</td><td>48 giờ</td></tr>
-                </table>
-                <div class="flow" style="margin-top:10px;">
-                  <div class="flow-node flow-parallel">C1: Daily Scrum</div>
-                  <span class="flow-arrow">→</span>
-                  <div class="flow-node flow-parallel">C2: Sprint Review đặc biệt</div>
-                  <span class="flow-arrow">→</span>
-                  <div class="flow-node flow-critical">C3: Giảm scope / GenAI</div>
-                  <span class="flow-arrow">→</span>
-                  <div class="flow-node flow-critical">C4: Điều chỉnh BAC</div>
-                </div>
-              </div>
-              <div class="slide-footer">26 / 29</div>
-            </section>
+    <section class="slide" id="slide-escalation" data-slide="26">
+      <div class="slide-header">QUY TRÌNH LEO THANG SỰ CỐ</div>
+      <div class="slide-body pm-slide">
+        <div class="sens-panel sens-compare-panel">
+          <table class="sens-table pm-escalation-table">
+            <thead>
+              <tr>
+                <th>Cấp</th>
+                <th>Vai trò</th>
+                <th>Điều kiện kích hoạt</th>
+                <th>Phản hồi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="pm-level pm-level--1">1</span></td>
+                <td>Dev + EM</td>
+                <td>SPI/CPI &lt; 0,9; Critical &gt; 24h</td>
+                <td><strong>4 giờ</strong></td>
+              </tr>
+              <tr>
+                <td><span class="pm-level pm-level--2">2</span></td>
+                <td>PO + EM</td>
+                <td>2 Sprint SPI &lt; 0,8; ≥ 3 US đổi</td>
+                <td><strong>24 giờ</strong></td>
+              </tr>
+              <tr>
+                <td><span class="pm-level pm-level--3">3</span></td>
+                <td>HR GM</td>
+                <td>Critical Path trễ; downtime &gt; NFR</td>
+                <td><strong>48 giờ</strong></td>
+              </tr>
+              <tr>
+                <td><span class="pm-level pm-level--4">4</span></td>
+                <td>BOD</td>
+                <td>Vượt BAC; Go-live trễ &gt; 2 tuần</td>
+                <td><strong>48 giờ</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="cost-block-title cost-block-title--orange">Hành động theo cấp</h3>
+        <div class="pm-flow">
+          <div class="pm-flow-step pm-flow-step--ok">C1: Daily Scrum</div>
+          <span class="pm-flow-arrow">→</span>
+          <div class="pm-flow-step pm-flow-step--ok">C2: Sprint Review đặc biệt</div>
+          <span class="pm-flow-arrow">→</span>
+          <div class="pm-flow-step pm-flow-step--alert">C3: Giảm scope / GenAI</div>
+          <span class="pm-flow-arrow">→</span>
+          <div class="pm-flow-step pm-flow-step--alert">C4: Điều chỉnh BAC</div>
+        </div>
+      </div>
+      <div class="slide-footer">26 / 29</div>
+    </section>
 
     <!-- SLIDE 27 -->
-    <section class="slide" data-slide="27">
-              <div class="slide-header">QUẢN TRỊ RỦI RO</div>
-              <div class="slide-body">
-                <p><strong>Chiến lược:</strong> Avoid · Mitigate · Transfer · Accept — Ma trận Xác suất × Ảnh hưởng</p>
-                <table>
-                  <tr><th>#</th><th>Rủi ro</th><th>Chiến lược</th></tr>
-                  <tr><td>R1</td><td>Thiếu KN GenAI sàng lọc CV</td><td>Training S2, POC S5, fallback, ngưỡng ≥80%</td></tr>
-                  <tr><td>R2</td><td>Tích hợp chéo CC–Lương–TS</td><td>Integration test S4–6, ACID, regression</td></tr>
-                  <tr><td>R3</td><td>API bên thứ 3 không ổn định</td><td>Mock API, retry×3, circuit breaker</td></tr>
-                </table>
-                <p class="note">Risk Register cập nhật cuối mỗi Sprint; Risk Review 30 phút tại Retrospective</p>
-              </div>
-              <div class="slide-footer">27 / 29</div>
-            </section>
+    <section class="slide" id="slide-risk" data-slide="27">
+      <div class="slide-header">QUẢN TRỊ RỦI RO</div>
+      <div class="slide-body pm-slide">
+        <p class="sens-kicker sens-kicker--warn">
+          <span class="sens-kicker-label">Phương pháp</span>
+          Avoid · Mitigate · Transfer · Accept — Ma trận <strong>Xác suất × Ảnh hưởng</strong>
+        </p>
+        <div class="cost-panel-grid cost-panel-grid--risk">
+          <article class="cost-panel-card cost-panel-card--orange">
+            <span class="cost-panel-badge">R1</span>
+            <h4 class="cost-panel-title">Thiếu KN GenAI sàng lọc CV</h4>
+            <p class="cost-panel-text">Training S2 · POC S5 · fallback thủ công · ngưỡng AI ≥ 80%</p>
+          </article>
+          <article class="cost-panel-card cost-panel-card--fpa">
+            <span class="cost-panel-badge">R2</span>
+            <h4 class="cost-panel-title">Tích hợp chéo CC – Lương – TS</h4>
+            <p class="cost-panel-text">Integration test S4–6 · ACID · regression sau mỗi Sprint</p>
+          </article>
+          <article class="cost-panel-card cost-panel-card--ucp">
+            <span class="cost-panel-badge">R3</span>
+            <h4 class="cost-panel-title">API bên thứ 3 không ổn định</h4>
+            <p class="cost-panel-text">Mock API · retry ×3 · circuit breaker · SLA fallback</p>
+          </article>
+        </div>
+        <p class="sens-footnote">Risk Register cập nhật cuối mỗi Sprint · Risk Review 30 phút tại Retrospective</p>
+      </div>
+      <div class="slide-footer">27 / 29</div>
+    </section>
 
     <!-- SLIDE 28 -->
-    <section class="slide" data-slide="28">
-              <div class="slide-header">KẾT LUẬN CHUNG</div>
-              <div class="slide-body three-col">
-                <div class="card">
-                  <p><strong>Hệ thống</strong></p>
-                  <p>8 module · 21 UC · 13 actors · Golang custom · NFR ≥99,5%</p>
-                </div>
-                <div class="card">
-                  <p><strong>Chi phí</strong></p>
-                  <p>UCP 1,29 tỷ vs FPA ~39 tỷ → <strong>UCP + GenAI 80%</strong> (~751 triệu)</p>
-                </div>
-                <div class="card">
-                  <p><strong>Kế hoạch</strong></p>
-                  <p>Scrum 12 Sprint · WBS 5 GĐ · Critical Path · EVM · Leo thang 4 cấp</p>
-                </div>
-                <div class="card" style="grid-column:1/-1;">
-                  <p><strong>Giá trị:</strong> Số hóa vòng đời NS · Làm chủ mã nguồn & dữ liệu nhạy cảm · Tối ưu ngân sách GenAI</p>
-                </div>
-              </div>
-              <div class="slide-footer">28 / 29</div>
-            </section>
+    <section class="slide" id="slide-conclusion" data-slide="28">
+      <div class="slide-header">KẾT LUẬN CHUNG</div>
+      <div class="slide-body pm-slide conclusion-slide">
+        <p class="sens-kicker sens-kicker--good">
+          <span class="sens-kicker-label">Đề xuất</span>
+          Triển khai <strong>HRIS Golang custom</strong> theo <strong>UCP + GenAI 80%</strong> — ngân sách ~751 triệu · 6 tháng · 5 kỹ sư AI-native
+        </p>
+    
+        <div class="cost-panel-grid conclusion-pillars">
+          <article class="cost-panel-card cost-panel-card--ucp">
+            <span class="cost-panel-badge">Hệ thống</span>
+            <h4 class="cost-panel-title">HRIS enterprise toàn diện</h4>
+            <ul class="conclusion-list">
+              <li>8 module · 21 UC · 13 actors</li>
+              <li>Tham khảo Horilla — triển khai Golang custom</li>
+              <li>NFR uptime ≥ 99,5%</li>
+            </ul>
+          </article>
+    
+          <article class="cost-panel-card cost-panel-card--fpa cost-panel-card--emphasis-fpa">
+            <span class="cost-panel-badge">Chi phí</span>
+            <h4 class="cost-panel-title">UCP + GenAI tối ưu ngân sách</h4>
+            <p class="conclusion-compare">
+              <span class="conclusion-compare-item conclusion-compare-item--ucp">UCP 1,29 tỷ</span>
+              <span class="conclusion-compare-vs">vs</span>
+              <span class="conclusion-compare-item conclusion-compare-item--fpa">FPA ~39 tỷ</span>
+            </p>
+            <ul class="conclusion-list">
+              <li>Chọn <strong>UCP + GenAI 80%</strong> → ~751 triệu</li>
+              <li>FPA làm thước đo chất lượng &amp; kiểm soát rủi ro</li>
+            </ul>
+          </article>
+    
+          <article class="cost-panel-card cost-panel-card--orange">
+            <span class="cost-panel-badge">Kế hoạch</span>
+            <h4 class="cost-panel-title">Scrum 12 Sprint · 6 tháng</h4>
+            <ul class="conclusion-list">
+              <li>WBS 5 giai đoạn · 5 kỹ sư AI-native</li>
+              <li>Critical Path: DB → Backend → Load test → UAT</li>
+              <li>EVM · leo thang 4 cấp · Risk Register chủ động</li>
+            </ul>
+          </article>
+        </div>
+    
+        <div class="conclusion-value">
+          <h3 class="conclusion-value-title">Giá trị mang lại</h3>
+          <div class="pm-tag-row conclusion-tags">
+            <span class="pm-tag">Số hóa vòng đời nhân sự</span>
+            <span class="pm-tag">Làm chủ mã nguồn &amp; dữ liệu nhạy cảm</span>
+            <span class="pm-tag">Time-to-market nhanh</span>
+            <span class="pm-tag">Tối ưu ngân sách nhờ GenAI</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">28 / 29</div>
+    </section>
 
     <!-- SLIDE 29 -->
     <section class="slide" data-slide="29">
